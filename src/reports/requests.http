@@ -1,0 +1,31 @@
+### Create a report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "make" : "ford",
+    "model": "mustang",
+    "year": 1982,
+    "mileage": 200000,
+    "lng": 45,
+    "lat": 45,
+    "price": 20000
+}
+
+### Get corolla estimate
+GET http://localhost:3000/reports?make=toyota&model=corolla&lng=0&lat=0&mileage=20000&year=1980
+
+### Get ford estimate
+GET http://localhost:3000/reports?make=ford&model=mustang&lng=45&lat=45&mileage=20000&year=1980
+
+### Delete a user given id
+DELETE http://localhost:3000/auth/1
+
+### Update a report
+PATCH http://localhost:3000/reports/3
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
